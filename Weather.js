@@ -1,6 +1,7 @@
 const baseURL = "http://api.openweathermap.org";
 const API_KEY = "8707f97c3d30138cbc0c5e3af77830ff";
 
+let chosenCity = "London";
 const fetchCityCoords = async (city) => {
     const cityRes = await fetch(
       `${baseURL}/geo/1.0/direct?q=${city}&limit=5&appid=${API_KEY}`
@@ -15,7 +16,7 @@ const fetchCityCoords = async (city) => {
 
   const fetchWeatherData = async (lat, lon) => {
     const cityWeather = await fetch(
-      `${baseURL}/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=sv`
+      `${baseURL}/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang={sv}`
     );
   
     const weatherData = await cityWeather.json();
@@ -39,13 +40,13 @@ const fetchCityCoords = async (city) => {
 const timeFetcher = () => {
     let currentDay = new Date(); 
     let currentTime =
-      "Date: " +
+      "År:  " +
       currentDay.getFullYear() +
-      " : " +
+      " Månad: " +
       (currentDay.getMonth()+1) +
-      " : " +
-      currentDay.getDate() +
-      " Time: " +  
+      " Dag: " + 
+      currentDay.getDate() +  
+      " <br> Klockan: " +  
       currentDay.getHours() +
       ":" +
       currentDay.getMinutes() +
@@ -64,12 +65,17 @@ const timeFetcher = () => {
   
   //Här har vi funktionen när man klickar på en knapp i HTMLN/webbsidan.
   const onClickCity = (city) => {
-    fetchCityCoords(city);
+    chosenCity = city;
+    fetchCityCoords(chosenCity);
   };
   
   //Default hämtar något startsida
-  fetchCityCoords("Göteborg");
+  fetchCityCoords(chosenCity);
   
   setInterval(() => {
     timeFetcher();
   }, 1000);
+
+  setInterval(() => {
+    fetchCityCoords(chosenCity);
+  }, 600000);
