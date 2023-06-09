@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Weather App</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link rel="stylesheet" href="Weather.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-<script src="weather.js"></script>
-</head>
-<body>
+  <head>
+    <title>Weather App</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="Weather.css" />
+    <script src="weather.js"></script>
+  </head>
+  <body>
     <header>
-
-        <div class="header">
-            <div class="front-logo">
-                    
-                <div class="logo-text">
-                <h2>Mitt Väder!</h2>
-                </div>
-            </div>
+      <div class="header">
+        <div class="front-logo">
+          <div class="logo-text">
+            <h2>Mitt Väder!</h2>
+          </div>
         </div>
-    </header>
-    
-    <nav id="navbar">
+      </div>
+      <nav id="navbar">
         <div class="nav-container">
-                <ul>
-                    <li><a href="#"  onclick="onClickCity('London')">Start</a>
-                    <li><a href="#" onclick="onClickCity('Stockholm')">Stockholm</a></li>
-                    <li><a href="#" onclick="onClickCity('Helsingborg')">Helsingborg</a></li>
-                    <li><a href="#" onclick="onClickCity('Malmö')">Malmö</a></li>
-                </ul>
-            
+          <ul>
+            <li><a href="#" onclick="onClickCity('London')">Start</a></li>
+            <li>
+              <a href="#" onclick="onClickCity('Stockholm')">Stockholm</a>
+            </li>
+            <li>
+              <a href="#" onclick="onClickCity('Helsingborg')">Helsingborg</a>
+            </li>
+            <li><a href="#" onclick="onClickCity('Malmö')">Malmö</a></li>
+          </ul>
         </div>
-    </nav>
+      </nav>
+    </header>
     <main>
-        <div class="container">
-    
-            <h4> Tryck på Staden ovan för att visa nuvarande väder! </h4>
-            
-            <div class="inner-container">
-            <h1 class="text-center" id="city"></h1>
-        
-            <div class="flex-column">
-            <div class="text-center">Temp: <div id="temp"></div></div>
-            <div class="text-center">Känns som:  <div id="feels_like"></div></div>
-            <div class="text-center">Vind: <div id="speed"></div></div>
-            <div class="text-center">Lufttryck: <div id="pressure"></div></div>
-            <div class="text-center">Fuktighet: <div id="humidity"></div></div>
-   
-          
-         </div>
-    </div>
-    <h3 id="tid"></h3>  
-</div>
+      <div class="container">
+        <h4>Tryck på Staden ovan för att visa nuvarande väder!</h4>
 
-</main>
-</body>
+        <div class="inner-container">
+          <h1 class="text-center" id="city"></h1>
+
+          <div class="flex-column">
+            <div class="text-center">
+              Temp: 
+              <div id="temp"></div>
+            </div>
+            <div class="text-center">
+              Känns som: 
+              <div id="feels_like"></div>
+            </div>
+            <div class="text-center">
+              Vind: 
+              <div id="speed"></div>
+            </div>
+            <div class="text-center">
+              Lufttryck: 
+              <div id="pressure"></div>
+            </div>
+            <div class="text-center">
+              Fuktighet: 
+              <div id="humidity"></div>
+            </div>
+          </div>
+        </div>
+        <h5 id="tid"></h5>
+      </div>
+    </main>
+  </body>
 </html>

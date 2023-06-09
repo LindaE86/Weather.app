@@ -1,113 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Labrada:wght@300&display=swap");
 
 body {
-    height: 100%;
-    background-color: white;
-    font-family:'Labrada';
-    font-weight: bold;
+  height: 100%;
+  background-color: rgb(160, 199, 199);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: #513f92;
+  font-weight: bold;
 }
 
 .front-logo {
-    background-image: url(/Bilder/images.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    padding: 80px;
-    max-height: 60px;
-    opacity: .85;
-    scale: 100%;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    color: rgb(196, 56, 161);
-    justify-content: center;
+  background-image: url(/Bilder/images.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px;
+  max-height: 60px;
+  opacity: 0.85;
+  scale: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(196, 56, 161);
+  justify-content: center;
 }
 
 .logo-text {
-    padding: 15px;
-    padding-left: 40px;
-    font-family:'Labrada';
-    font-size: 60px;   
-    text-align: center;
+  padding: 15px;
+  padding-left: 40px;
+  font-family: "Labrada";
+  font-size: 60px;
+  text-align: center;
 }
 
 #navbar {
-    margin: auto;
-    background-color: #513f92;
-    opacity: .85;
-    border-radius: 3px;
-    padding: 5px;
-    margin-bottom: 20px;
+  margin: auto;
+  background-color: #513f92;
+  opacity: 0.85;
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 nav ul {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px;
-    padding: 1px;
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    font-family:'Labrada';
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 1px;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  font-family: "Courier New", Courier, monospace;
 }
 
 nav li {
-    list-style: none;
+  list-style: none;
 }
 a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .inner-container {
-   display: flex;
-   flex-direction: column;
-   text-align: center;
-   border: solid #513f92 3px;
-   background-color: rgb(160, 199, 199);
-   box-shadow: 1px 2px 2px black, 0 0 5px #513f92, 0 0 5px rgb(196, 56, 161);
-   width: 300px;
-   padding: 25px;
-   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: solid #513f92 3px;
+  background-color: rgb(160, 199, 199);
+  box-shadow: 1px 2px 2px black, 0 0 5px #513f92, 0 0 5px rgb(196, 56, 161);
+  width: 300px;
+  height: 250px;
+  padding: 25px;
+  margin-top: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 .text-center {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    color: #513f92;
-    font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: #513f92;
+  font-weight: bold;
 }
 
-
 #temp {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 #feels_like {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 #speed {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 #pressure {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 #humidity {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
